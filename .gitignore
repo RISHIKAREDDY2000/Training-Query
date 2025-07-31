@@ -1,0 +1,9 @@
+/build
+/.gradle
+.gradle
+*.log
+*.iml
+.idea
+.vscode
+application.properties
+application.yml

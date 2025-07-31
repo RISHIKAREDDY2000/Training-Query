@@ -1,0 +1,22 @@
+package com.rules
+
+import com.training.query.Training.Query.collections.TrainingAssociation;
+
+global java.util.List escalationList;
+global java.util.Date thresholdDate;
+
+
+
+rule "Escalate training if due in next 3 days and not completed"
+    when
+        $ta : TrainingAssociation(
+            status != "COMPLETED",
+            //dueDate <= thresholdDate
+            dueInNext3Days == true
+        )
+    then
+        System.out.println("Escalating training for employeeId: " + $ta.getEmployeeId());
+        $ta.setStatus("Escalated");
+        escalationList.add($ta);
+        update($ta);
+end

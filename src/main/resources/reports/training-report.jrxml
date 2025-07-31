@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="training_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5e9b4efb-6e65-44c0-b67f-b4582b7c4e21">
+
+    <parameter name="createdBy" class="java.lang.String"/>
+
+    <field name="employeeId" class="java.lang.String"/>
+    <field name="employeeName" class="java.lang.String"/>
+    <field name="trainingId" class="java.lang.String"/>
+    <field name="status" class="java.lang.String"/>
+    <field name="assignedDate" class="java.util.Date"/>
+    <field name="dueDate" class="java.util.Date"/>
+
+    <title>
+        <band height="50">
+            <textField>
+                <reportElement x="0" y="0" width="300" height="20"/>
+                <textElement textAlignment="Left">
+                    <font size="16" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Training Report"]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <columnHeader>
+        <band height="20">
+            <staticText><reportElement x="0" y="0" width="140" height="20"/><text><![CDATA[Employee ID]]></text></staticText>
+            <staticText><reportElement x="140" y="0" width="130" height="20"/><text><![CDATA[Employee Name]]></text></staticText>
+            <staticText><reportElement x="270" y="0" width="70" height="20"/><text><![CDATA[Training ID]]></text></staticText>
+            <staticText><reportElement x="340" y="0" width="70" height="20"/><text><![CDATA[Status]]></text></staticText>
+            <staticText><reportElement x="410" y="0" width="130" height="20"/><text><![CDATA[Due Date]]></text></staticText>
+        </band>
+    </columnHeader>
+
+    <detail>
+        <band height="20">
+            <textField><reportElement x="0" y="0" width="140" height="20"/><textFieldExpression><![CDATA[$F{employeeId}]]></textFieldExpression></textField>
+            <textField><reportElement x="140" y="0" width="130" height="20"/><textFieldExpression><![CDATA[$F{employeeName}]]></textFieldExpression></textField>
+            <textField><reportElement x="270" y="0" width="70" height="20"/><textFieldExpression><![CDATA[$F{trainingId}]]></textFieldExpression></textField>
+            <textField><reportElement x="340" y="0" width="70" height="20"/><textFieldExpression><![CDATA[$F{status}]]></textFieldExpression></textField>
+            <textField pattern="MM/dd/yyyy"><reportElement x="410" y="0" width="130" height="20"/><textFieldExpression><![CDATA[$F{dueDate}]]></textFieldExpression></textField>
+        </band>
+    </detail>
+
+
+
+    <pageFooter>
+        <band height="20">
+            <textField>
+                <reportElement x="0" y="0" width="200" height="20"/>
+                <textFieldExpression><![CDATA["Created By: " + $P{createdBy}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+</jasperReport>
