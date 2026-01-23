@@ -1,4 +1,4 @@
-# 🏢 Training-Query (Corporate Learning Management System)
+# Training-Query (Corporate Learning Management System)
 
 > Backend-first Corporate Learning Management System that automates training assignment, reminders, escalations, and reporting for 100+ employees.
 
@@ -10,7 +10,7 @@
 
 ---
 
-## ✨ Overview
+## Overview
 
 **Training-Query (CLMS)** is a full-stack enterprise application designed to streamline corporate learning.  
 It automates:
