@@ -1,5 +1,6 @@
 # Training-Query (Corporate Learning Management System)
 
+> This project was completed as part of my Master’s program and demonstrates applied skills in backend development, scheduling, and training management systems.
 > Backend-first Corporate Learning Management System that automates training assignment, reminders, escalations, and reporting for 100+ employees.
 
 [![Java](https://img.shields.io/badge/Java-17-orange)]()
